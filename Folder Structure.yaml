@@ -1,0 +1,24 @@
+finance_ai_agents/
+│
+├── app.py # Gradio UI Entry Point
+├── components/ # Agent logic modules
+│ ├── document_router.py
+│ ├── doc_router.py
+│ ├── ocr_api_module.py
+│ ├── payroll_checker.py
+│ ├── loan_verifier.py
+│ ├── tax_filer.py
+│ └── fund_valuator.py
+│
+├── llm/ # LLM Prompt & Wrapper
+│ ├── prompt_templates.py
+│ └── llm_utils.py
+│
+├── utils/ # (Optional) OCR, PDF utils
+│ ├── rules_engine.py
+│
+├── data/ # Sample documents, test inputs
+│
+├── main_orchestrator.ipynb # Notebook version for testing
+├── requirements.txt
+└── README.md
