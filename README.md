@@ -1,24 +1,44 @@
-# finance_ai_agents
-/finance_ai_agents/
+# 🤖 Finance AI Agent System
+
+A modular AI agent system powered by LLMs and rules to automate analysis of financial documents like loan statements, tax forms, and mutual fund portfolios — all integrated into a Gradio web interface.
+
+> Built by **Md Sakib Reja** | AI/ML & GenAI Developer
+
+---
+
+## 🧩 Features
+
+- 🔍 **Document Router Agent** – Classifies documents automatically (Loan, Tax, Mutual Funds)
+- 🏦 **Loan Verifier Agent** – Extracts EMI, loan amount, and provides LLM-based summary
+- 💰 **Tax Filing Agent** – Summarizes Form-16 or tax documents
+- 📊 **Mutual Fund Valuation Agent** – Calculates portfolio value from CSV + LLM reasoning
+- 🌐 **Gradio Web UI** – Upload, analyze & view results from a clean browser interface
+- 🔗 **Modular Design** – Easy to extend with OCR, APIs, new agents, memory, or cloud tools
+
+---
+
+## 🖼️ Architecture
+
+┌──────────────────────────┐
+│ User Interface │◄──── (Gradio)
+└────────────┬─────────────┘
 │
-├── main_orchestrator.ipynb         # 🔁 Main entry notebook (agent routing)
-├── components/
-│   ├── ocr_api_module.py           # 🧾 OCR or API input processor
-│   ├── loan_verifier.py            # 🏦 Loan application verification agent
-│   ├── payroll_checker.py          # 💰 Payroll reconciliation agent
-│   ├── tax_filer.py                # 🧾 Tax filing agent
-│   ├── fund_valuator.py           # 📊 Mutual fund valuation agent
-│   └── doc_router.py              # 📑 Document classifier/router
+▼
+┌──────────────────────────┐
+│ Agent Orchestrator │◄──── (Python Logic)
+└────────────┬─────────────┘
+┌───────┼────────────────────────────────────────────────────┐
+▼ ▼ ▼ ▼ ▼ ▼
+┌────────┐ ┌────────────┐ ┌──────────────┐ ┌────────────┐ ┌────────────┐
+│OCR/API │ │Loan Verifier│ │Tax Filer Agent│ │Fund Valuator│ │Doc Router │
+└────────┘ └────────────┘ └──────────────┘ └────────────┘ └────────────┘
+│ │ │ │ │
+▼ ▼ ▼ ▼ ▼
+┌────────────────────────────────────────────────────────────────────┐
+│ Common Intelligence Layer (GPT-4o / Claude / Gemini via LLMs) │
+└────────────────────────────────────────────────────────────────────┘
 │
-├── llm/
-│   ├── prompt_templates.py         # 💬 Prompt templates for LLMs
-│   └── llm_utils.py                # 🧠 Wrapper for GPT-4o or Azure OpenAI
-│
-├── data/
-│   ├── sample_inputs/              # Sample PDFs, CSVs, JSON
-│   └── outputs/                    # Generated outputs or logs
-│
-└── utils/
-    ├── vector_store.py            # 🧠 FAISS/Chroma logic
-    ├── rules_engine.py            # ✅ Business validation logic
-    └── file_utils.py              # 📂 File processing utilities
+▼
+┌──────────────────────────┐
+│ Data & Knowledge Base │◄──── Spreadsheets, APIs, Vector DBs
+└──────────────────────────┘
