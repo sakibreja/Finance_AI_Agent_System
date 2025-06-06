@@ -49,3 +49,6 @@ A modular AI agent system powered by LLMs and rules to automate analysis of fina
     ┌──────────────────────────┐
     │ Data & Knowledge Base │◄──── Spreadsheets, APIs, Vector DBs
     └──────────────────────────┘
+
+
+![ChatGPT Image Jun 6, 2025, 06_07_16 PM](https://github.com/user-attachments/assets/518a6cf7-3aba-4e7a-ae9e-6e007c4d679c)
