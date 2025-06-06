@@ -17,6 +17,10 @@ A modular AI agent system powered by LLMs and rules to automate analysis of fina
 
 ---
 
+## 👨‍💻 Author
+- Md Sakib Reja
+- AI/ML & GenAI Developer
+
 ## 🖼️ Architecture
 
 ┌──────────────────────────┐
